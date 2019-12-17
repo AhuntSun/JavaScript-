@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    //1、更新的变量
+    var myname = '路飞';
+    console.log(myname);
+    myname = '鸣人';
+    console.log(myname);
+
+    //2、同时声明多个变量：变量之间用逗号隔开
+    // var age=18;
+    // var address='火影村';
+    var age = 18,
+        address = '火影村',
+        gz = 2000;
+    /* 注意：
+    var a=b=c=10;等价于
+    var a=10;
+    b=10;
+    c=10; */
+
+    //3、声明变量的特例
+    //3.1 只声明不给值,输出的结果是undefined
+    var sex;
+    console.log(sex);
+    //3.2 不声明不赋值，直接用会报错
+    //3.3 不声明，赋值了直接用：可以使用，不提倡
+    qq = 1000;
+    console.log(qq);
+</script>
+
+<body>
+
+</body>
+
+</html>

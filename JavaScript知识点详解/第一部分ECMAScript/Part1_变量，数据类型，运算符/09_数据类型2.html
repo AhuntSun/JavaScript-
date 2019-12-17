@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var num = 10; //num 数字型
+    var num2 = 3.14; //num2 数字型
+
+    //1、八进制 0~7: 在数字前面加0 表示该数为八进制
+    var num1 = 010;
+    //输出时默认转化为10进制，010=8；
+    console.log(num1);
+    var num2 = 012;
+    console.log(num2);
+
+    //2、十六进制：0~9 A~F:在数字前面加0x 表示十六进制 
+    var num3 = 0x9;
+    console.log(num3);
+    var num4 = 0xa;
+    console.log(num4);
+
+    //3、数字型的最大值
+    console.log(Number.MAX_VALUE);
+
+    //4、无穷大
+    console.log(Number.MAX_VALUE * 2); //Infinity
+    console.log(-Number.MAX_VALUE * 2); //-Infinity
+
+    //5、非数字NAN
+    console.log('github' - 100); //没办法计算输出NaN
+    //isNaN() 这个方法用来判断非数字，并且返回一个boolean值,是数字返回false，不是数字返回true
+    console.log(isNaN(12)); //false
+    console.log(isNaN('pink')); //true
+</script>
+
+<body>
+
+</body>
+
+</html>
