@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="time">2019-11-22</div>
+    <script>
+        //该标签的一个特点是往前看，所以该便签写在body便签里面
+        //1.方法getElementById(),括号内转换为字符串形式的元素id,可获取对应ID的元素对象 (驼峰命名法)
+        //2.参数 id是大小写敏感的字符串
+        //3.返回的是一个元素对象
+        var timer = document.getElementById('time');
+        console.log(timer);
+        console.log(typeof timer); //Object
+        //4.console.dir(); 打印返回的元素对象 更好的查看里面的属性和方法
+        console.dir(timer);
+    </script>
+</body>
+
+</html>

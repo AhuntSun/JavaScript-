@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let关键字是用来声明变量的
+        //使用let关键字声明的变量具有块级作用域
+        //在一个大括号中使用let关键字声明的变量才具有块级作用域，var关键字是不就别这种特性的
+        //好处：防止循环变量编程全局变量
+        // 使用let关键字声明的变量没有变量提升
+
+        // let a = 10;
+        // console.log(a);
+
+        /*  if (true) {
+             let b = 20;
+             console.log(b);
+             if (true) {
+                 let c = 30;
+             }
+             console.log(c); //不能访问c
+
+         }
+         console.log(b); //不能访问b */
+
+        /*  if (true) {
+             let num = 100;
+             var abc = 200;
+         }
+         console.log(abc); //可以访问，不具有块级作用域
+         console.log(num); //无法访问 */
+
+        //好处：防止循环变量编程全局变量
+        /*   for (let i = 0; i < 2; i++) {
+
+          }
+          console.log(i); //i=2因为i=2时循环才结束 */
+
+        //ES6之前 变量可以先试用再声明是因为存在变量提升
+
+        // 使用let关键字声明的变量没有变量提升
+        // console.log(a);
+        // let a = 100;
+
+        //使用let关键字声明的变量具有暂时性死区特性
+        var num = 10;
+        if (true) {
+            console.log(num);
+            let num = 20;
+        }
+    </script>
+</body>
+
+</html>

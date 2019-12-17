@@ -1,0 +1,9 @@
+
+1.JS基础阶段
+    学习的是ECMAScript标准规定的基本语法
+2.Web APIs阶段
+    Web APIs是W3C组织的标准
+    Web APIs只要学习DOM和BOM
+    Web APIs是JS独有的部分
+
+JS基础学习ECMAScript基础语法为后面做铺垫 Web APIs是JS的应用，大量使用JS基础语法做交互效果
