@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //字符串转换为数字型(重点)
+        var age = prompt('请输入你的年龄'); //得到一个string数据
+
+        // 1、使用parseInt(变量) 可以把字符型转换为数字型得到整数。(重点)
+        console.log(parseInt(age)); //把string转化为number数据，高亮显示
+        console.log(parseInt(3.2)); //取整输出3
+        console.log(parseInt(3.98)); //取整输出3
+        console.log(parseInt('1200px')); //会去掉px的单位,输出1200
+        console.log(parseInt('px1200rem')); //NaN,不能乱来,要按照常用格式
+
+        // 2、parseFloat(变量) 可以把字符型转换为数值型 得到的是小数 浮点数(重点)
+        console.log(parseFloat(3.14)); //3.14
+        console.log(parseFloat('1200px')); //1200
+        console.log(parseFloat('px1200rem')); //NaN
+
+        //3、利用Number(变量);强制转换
+        //可根据输出结果，number数据高亮显示，string数据灰色显示来直观判断两种数据类型
+        var str = '123';
+        console.log(Number(str)); //123(高亮)
+        console.log(typeof str); //string
+        console.log(Number('13')); //13(高亮)
+
+        //4、利用算式运算：- * / 隐式转换
+        console.log('12' - 0); //12;常通过 '-0' 把字符串数字转换为数字型
+        console.log('1231' * 1); //1231
+        console.log('123' - '120'); //3
+        //总结：'+' 用于隐式转换为字符串; '* - /用于隐式转换为数字型;
+    </script>
+</body>
+
+</html>

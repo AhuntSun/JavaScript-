@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var number = 10;
+        // typeof 空格后直接加要检测数据类型的的变量名
+        console.log(typeof number); //number
+        var str = 'git';
+        console.log(typeof str); //string
+        var flag = true;
+        console.log(typeof flag); //boolean
+        var vari = undefined;
+        console.log(typeof vari); //undefined
+        var timer = NaN;
+        console.log(typeof timer); //number,NaN属于number数据类型
+        var timer1 = null;
+        console.log(typeof timer1); //null,null属于object类型
+        //常见的五种基本数据类型：number、string、boolean、undefined、null;
+        //除此之外ES6中还新增了 symbol 和 BigInt 两种数据类型
+        var a = BigInt(10);
+        console.log(typeof a); //bigint
+        var b = Symbol();
+        console.log(typeof b); //symbol
+    </script>
+</body>
+
+</html>

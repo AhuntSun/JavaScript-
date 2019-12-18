@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var flag = true;
+        var flag2 = false;
+        // 参与运算时true当做1，false当做0来看
+        console.log(flag + flag2); //1
+
+        // 如果一个变量声明未给值，值就是undefined
+        var variable = undefined; //显式声明undefined
+        console.log(Boolean(variable) === false); //使用Boolean()转换为布尔值为false
+        //*注意undefined本身并不为Boolean数据类型，要是用Boolean()方法进行转换，才变为Boolean类型
+        console.log(typeof variable); //undefined
+        console.log(variable + 'pink'); //输出为拼接字符串
+        console.log(variable + 3); //输出为NaN(not a number)
+
+        //null 空值
+        var space = null;
+        console.log(Boolean(space) === false); //使用Boolean()转换为布尔值为false
+        console.log(typeof space); //Object,但并不代表null属于Object类型，这是JS设计的一个bug
+        console.log(space + 'pink'); //输出为拼接字符串
+        console.log(space + 1); //输出为数值的值
+    </script>
+</body>
+
+</html>

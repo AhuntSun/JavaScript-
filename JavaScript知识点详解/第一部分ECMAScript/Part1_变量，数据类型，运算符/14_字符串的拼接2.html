@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.拼接字符串加强(引号是就近匹配的)
+        //如果想输出：git老护士18岁了，可以这样写
+        console.log('git老护士' + 18 + '岁了');
+        //如果使用age变量存储18，怎样才能把实现字符串拼接呢？
+        var age = 18;
+        console.log('pink老师age岁'); //这样拼接显然不行
+        console.log('pink老师' + age + '岁'); //应该这样拼接
+
+        // 变量不要写到字符串内，正确的方法是通过+号运算符与字符串相连
+        // 变量和字符串相加的口诀：“引引相加”
+        // 先写字符串：log('pink老师岁');然后在需要加变量的老师后面加上单引号(引引)；log('pink老师''岁');最后在单引号里面加两个加号(加加)：log('pink老师'++'岁');加号中间就可以写需要插入的变量名了。
+        console.log('pink老师' + age + '岁');
+    </script>
+</body>
+
+</html>

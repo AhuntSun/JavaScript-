@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 数字型转化为字符串：1.变量.toString(); 2.String()强制转换； 3.+号拼接字符串(最重要)
+
+        //1.变量.toString()
+        var num = 10;
+        console.log(typeof num); //number
+        var str = num.toString();
+        console.log(typeof str); //string
+
+        //2、利用String(变量)
+        var num2 = 19;
+        console.log(typeof num2); //number
+        console.log(typeof String(num2)); //string
+
+        //3、利用+号拼接字符串(最常用，也称为隐式转换)
+        var num3 = num2 + '';
+        console.log(num3); //19,输出的19是string类型
+        console.log(typeof num3); //string,常使用 number + ''(空字符串) 把number型数据转换为string类型
+    </script>
+</body>
+
+</html>
