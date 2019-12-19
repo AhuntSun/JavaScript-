@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+                                        1、用布尔值参与逻辑运算， true&&false == false
+                                        2. 123 && 456 值或者是表达式等非bool值参与逻辑运算。
+                                        *只要当逻辑运算符用于运算非bool值时才会出现逻辑中断*
+                                        短路运算的原理：当有多个表达式(值)进行逻辑运算,当逻辑运算符左边的表达式可以确定结果时，就不再继续运算右边表达式的值
+                                        3.逻辑与(&&)的短路运算:表达式1 && 表达式2 ;如果表达式1 结果为真 则返回表达式2;如果表达式1 结果为假 则返回表达式1 
+                                        */
+        console.log(123 && 456); //结果456
+        console.log(0 && 456); //返回0
+        console.log(0 && 1 + 2 && 456 + 56789); //短路了，返回0
+        // 如果有空的或者否定的值为假，其余值为真。
+        //比如常见的五种返回假的情况： 0 ''(字符串中除了空字符串为假其余为真)、null、undefined、 NaN
+
+        //4、逻辑或(||)短路: 表达式1 || 表达式2 ;如果表达式1 结果为真 则返回表达式1; 如果表达式1 结果为假 则返回表达式2
+        console.log(123 || 567); //123
+        console.log(0 || 123 || 456 || 678); //123 多重情况下0与123比完 再判断123 || 456
+        // 例如 会影响输出结果
+        var num = 0;
+        console.log(100 || num++); //由于逻辑中断直接返回100 不运行后面的num++所以num的值还是0
+        console.log(num); //0,因为程序没有执行num++
+    </script>
+</body>
+
+</html>

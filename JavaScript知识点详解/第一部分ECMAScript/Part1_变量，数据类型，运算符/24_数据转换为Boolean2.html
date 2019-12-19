@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 代表空、否定的值都会被转换为false，如：''(空字符串)、0 、NaN、null、undefined
+        // 其余值会被转换为true
+        console.log(Boolean('')); //false
+        console.log(Boolean(0)); //false
+        console.log(Boolean(null)); //false
+        console.log(Boolean(NaN)); //false
+        console.log(Boolean(undefined)); //false
+        console.log('*************************');
+
+        console.log(Boolean(1231)); //true
+        console.log(Boolean('你好吗')); //true
+    </script>
+</body>
+
+</html>
