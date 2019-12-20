@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = '';
+        var rows = prompt('请输入行数');
+        var clos = prompt('请输入列数');
+        for (var i = 0; i < rows; i++) {
+            for (var j = 0; j < clos; j++) {
+                str += '☆';
+            }
+            str += '\n'; //打印为一行星星后换行
+        }
+        //所打印出来的星星是一个字符串,打印星星实质上是字符串的拼接
+        console.log(str);
+    </script>
+</body>
+
+</html>

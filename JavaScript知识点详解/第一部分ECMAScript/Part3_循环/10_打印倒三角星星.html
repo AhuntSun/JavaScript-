@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = '';
+        for (var i = 10; i >= 1; i--) { //记住了一般外层循环负责行数
+            /*  for (var j = 1; j <= i; j++) {
+                 str += '☆';
+             } */
+            // 版本2
+            for (var j = i; j > 0; j--) { //里循环打印的个数不一样 j+i 两个方向：1、减小起始值；2、减小终止值
+                str += '☆';
+            }
+            str += '\n';
+        }
+        console.log(str);
+    </script>
+</body>
+
+</html>

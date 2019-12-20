@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var fruit = prompt('请输入水果的名字');
+        switch (fruit) {
+            case '苹果':
+                alert('苹果的价格是3.5$');
+                break;
+
+            case '榴莲':
+                alert('榴莲的价格是10$');
+                break;
+
+            case '香蕉':
+                alert('香蕉的价格是问乌蝇哥');
+                break;
+            default:
+                alert('没有此水果');
+        }
+        // switch效率高一些;通常处理case为比较确定的值的情况
+        // 分支少时if else好一些
+        // 分支多时switch好一些
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //例如，吃5个包子，第三个包子有虫子，我们就扔掉第3个包子，继续吃第4个和第5个包子，代码实现如下
+        //continue 关键字 退出本次(当前次的循环) 继续执行剩余次的次数循环
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                console.log('这包子有虫子~我不吃了~');
+                continue; //只要遇到continue就退出本次循环，直接跳到i++上
+            }
+            console.log('我正在吃第' + i + '个包子');
+        }
+
+        console.log('----------------------------------------');
+
+        //1.求1~100之间 除了能被7整除的数之外的整数和
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                console.log('哇~竟然被你发现了~'); //在continue之前，未循环跳出。不会被执行
+                continue;
+                console.log('我没有被执行~你看不到我~'); //在continue之后，已跳出循环，不会被执行
+            }
+            sum += i;
+        }
+        console.log('1~100之间 除了能被7整除的数之外的整数和为：' + sum);
+    </script>
+</body>
+
+</html>

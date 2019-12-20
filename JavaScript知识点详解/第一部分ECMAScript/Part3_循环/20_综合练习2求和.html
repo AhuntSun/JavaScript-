@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0;
+        //要求：求1~100之间，除了个位数为3的整数的和
+        // var a; //这样写 a 的类型为undefined,不建议
+        // a = 1; //这样写a 会根据=右边的值类型来确定a 的类型,不建议
+        // console.log(typeof a);
+        for (var i = 1; i <= 100; i++) {
+            if ((i - 3) % 10 == 0) { //利用减去个位数取 10的n次方 余的方式，可以判断任意个、十、百位数的整数
+                console.log('剔除了' + i + '');
+                continue;
+            }
+            sum += i;
+        }
+        console.log('1~100中除了个位数为3的整数的和为：' + sum + '');
+    </script>
+</body>
+
+</html>

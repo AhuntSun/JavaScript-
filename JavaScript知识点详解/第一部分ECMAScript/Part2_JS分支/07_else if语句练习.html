@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var score = prompt('请你输入分数');
+        if (score <= 100 && score >= 90) {
+            alert('你的等级为A');
+        } else if (score < 90 && score >= 80) {
+            alert('你等等级是B');
+        } else if (score < 80 && score >= 70) {
+            alert('你等等级是C');
+
+        } else if (score < 70 && score >= 60) {
+            alert('你等等级是D');
+
+        } else if (score >= 0 && score < 60) {
+            alert('你等等级是E');
+        } else {
+            alert('请输入1~100的数值');
+        } //当不设置分数上限时，判断条件可以从(score < 90 && score>= 80)简化为(score >= 80)因为当跳过第一条分支执行该分支时就表明了， 输入的数值比90小， 不用重复判断了,下面的分支以此类推。
+    </script>
+</body>
+
+</html>

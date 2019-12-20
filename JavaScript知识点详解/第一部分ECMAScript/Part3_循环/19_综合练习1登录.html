@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //要求:提示用户输入账号密码，正确输入则表示登陆成功，否则一直弹出
+         var yes = false;
+        var name = '';
+        var word = '';
+        while (!yes) {//yes变量的设置是必要的，作为循环的条件，控制循环的终止
+            name = prompt('请输入用户名');
+            word = prompt('请输入密码');
+            if (name != 'admin') {
+                alert('请输入正确的用户名');
+            } else if (word != '123456') {
+                alert('请输入正确的密码');
+            }
+            yes = (name == 'admin' && word == '123456');
+        }
+        alert('登录成功~');
+    </script>
+</body>
+</html>

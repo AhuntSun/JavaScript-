@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1、for循环一般与计数有关系
+        //2.语法结构
+        // for(初始化变量;条件表达式;操作表达式){
+        //     // 循环体
+        // }
+        //3.初始化变量 就是var声明的一个普通变量 通常作为计数器使用
+        //4.条件表达式 就是用来决定每一次循环是否继续执行 就是终止条件
+        //5.操作表达式 是每次循环最后执行的代码 经常用于我们计数器变量进行更新(递增或者递减)
+        //6.代码体验
+        for (var i = 0; i < 100; i++) {
+            console.log('我爱你');
+        }
+        // 让用户设置输出次数
+        var num = prompt('请你输入循环次数');
+        for (var i = 1; i <= num; i++) {
+            console.log('我错了');
+        }
+        /* 
+            7.for循环执行过程：
+                for(初始化变量(1);条件表达式(2);操作表达式(3)){
+                循环体(4)
+                }
+                执行顺序为：初始化变量->条件表达式->循环体->操作表达式->条件表达式->循环体
+                即： 1 2 4 3 2 4 3 2 4 3可见语句1只执行一次
+                计数器变量常用i（index） 
+        */
+    </script>
+</body>
+
+</html>

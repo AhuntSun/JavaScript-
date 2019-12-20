@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //do while 语法结构
+        /*
+            do {
+                    //循环体(1)
+                    //操作表达式(3)
+                } while (条件表达式(2)) 
+        */
+        //2.执行思路，跟while不同之处在于 do while是先执行一次循环体，在判断条件 如果条件表达式为真则继续执行循环体 否则停止：顺序为：1->3->2
+        //3代码示例
+        var i = 1;
+        do {
+            console.log('虽然我不符合条件，但我至少能执行一次~how are you~');
+            i++;
+        } while (i >= 100)
+        //do while至少执行一次循环体
+        //可见for 循环是在循环结构内初始化的变量，do while和while循环则是在循环结构外初始化的变量
+    </script>
+</body>
+
+</html>

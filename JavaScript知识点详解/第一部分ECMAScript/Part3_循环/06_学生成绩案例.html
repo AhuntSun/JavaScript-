@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //自定义班级学生数量,分别输入他们的成绩,输出班级平均分。
+        var num = prompt('请输入班级总的人数');
+        var sum = 0;
+        for (var i = 1; i <= num; i++) {
+            sum += parseInt(prompt('请输入第' + i + '个学生的成绩')); //prompt()返回的是string类型数据
+        }
+        var aver = sum / num;
+        alert(num + '个学生的平均成绩为：' + aver);
+    </script>
+</body>
+
+</html>

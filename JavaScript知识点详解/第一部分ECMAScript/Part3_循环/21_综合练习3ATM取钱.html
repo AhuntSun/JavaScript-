@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 要求：给用户提供四种服务的选择：存钱，取钱，显示余额，退出
+                                    存钱服务：存钱后显示余额;
+                                    取钱服务：取钱后显示余额;
+                                    显示余额服务：显示余额;
+                                    退出服务:退出。
+                                 */
+
+        var out = false; //该变量控制循环的结束
+        var sum = 100; //初始存款为100
+        while (!out) {
+            var result = prompt('请输入您要的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+            switch (result) {
+                case '1':
+                    var input = prompt('请输入您要存的钱数：');
+                    sum += parseInt(input);
+                    alert('您现在的钱数是' + sum + '');
+                    break;
+                case '2':
+                    var output = prompt('请输入您要取得钱数：');
+                    sum -= parseInt(output);
+                    alert('您现在的余额是：' + sum + '');
+                    break;
+                case '3':
+                    alert('您现在的余额是：' + sum + '');
+                    break;
+                case '4':
+                    alert('正在退出');
+                    break;
+                default:
+                    alert('请输入数字1~4');
+                    break;
+            }
+            out = (result == '4'); //当选择退出服务时，退出循环
+        }
+    </script>
+</body>
+
+</html>

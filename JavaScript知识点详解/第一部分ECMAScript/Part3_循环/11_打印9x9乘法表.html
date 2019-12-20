@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = '';
+        for (var i = 1; i < 10; i++) { //外层循环控制行数
+            for (var j = 1; j <= i; j++) { //里层循环控制每一行的个数 j<=i;
+                // console.log(j + 'x' + i + '=' + i * j);
+                // str = str +'※';
+                str += j + 'x' + i + '=' + i * j + '\t';
+            }
+            str += '\n';
+        }
+        console.log(str);
+        // 整体思路是只输出 str一个字符串，即str就是99乘法表本身,实质上就是字符串的拼接
+    </script>
+</body>
+
+</html>

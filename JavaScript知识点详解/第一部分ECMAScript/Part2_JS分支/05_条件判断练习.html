@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var year = prompt('请你输入年份');
+        //加入条件判断的if else分支结构;
+        //闰年的条件是：1.能被4整除，不能被100整除;2.或者能被400整除
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            alert('你输入的是闰年');
+        } else {
+            alert('你输入的不是闰年');
+        }
+
+        //除了布尔值，判断的条件也可以是其他数据类型
+        var str = prompt('请输入你的姓名');
+        if (str === 'Tom') {
+            alert('Hello Tom~');
+        } else {
+            alert('Who are you~');
+        }
+    </script>
+</body>
+
+</html>

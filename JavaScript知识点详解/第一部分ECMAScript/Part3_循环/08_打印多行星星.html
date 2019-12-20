@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //循环嵌套
+        /*  for (外层的初始化变量; 外层的条件表达式; 外层的操作表达式) {
+             for (里层的初始化变量; 里层的条件表达式; 里层的操作表达式) {
+                 //执行语句
+             }
+         } */
+        //2.我们可以把里面循环看做外面循环的语句
+        //3.外层的代码循环一次，里面的代码循环执行全部
+        //4.多行操作时,一般都是外层循环管行数;内层循环管每行的列数
+        //实例：
+        var str = '';
+        for (var i = 1; i <= 3; i++) {
+            console.log('这是外层循环第' + i + '次');
+            for (var j = 1; j <= 3; j++) {
+                // str = str + '☆';
+                console.log('这是内层循环的第' + j + '次');
+            }
+        }
+        //从输出结果可以看出,外层循环一次,内层完成全部循环。
+        console.log('**********开始正式打印星星************');
+        for (var i = 0; i <= 3; i++) {
+            for (var j = 0; j <= 3; i++) {
+                str += '☆';
+                console.log(str);
+            }
+        }
+    </script>
+</body>
+
+</html>

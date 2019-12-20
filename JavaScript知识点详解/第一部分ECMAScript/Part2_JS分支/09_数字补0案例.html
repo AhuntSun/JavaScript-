@@ -10,6 +10,10 @@
 
 <body>
     <script>
+        var time = prompt('请你输入一个0~59的数字');
+        //使用三元表达式,实现输入1~9自动在数字前补 '0'
+        var result = time < 10 ? '0' + time : time; //把返回值赋值给一个变量result 
+        alert(result);
     </script>
 </body>
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i = 1;
+        while (i <= 100) {
+            console.log('这个人今年' + i + '岁了');
+            i++;
+        }
+
+        //求1~100的整数和
+        var j = 1;
+        var sum = 0;
+        while (j <= 100) {
+            sum += j;
+            j++;
+        }
+        console.log(sum);
+        //while循环适合做一些比较复杂的条件判断
+        //弹出提示框，Do you love me？如果输入i love you，就提示结束，否则一直询问
+        var meg = prompt('Do you love me？');
+        while (meg !== 'i love you') { //!=表示不严格的比较 ，！==则是严格的比较，要求数据类型和值的一致
+            var meg = prompt('Do you love me？');
+        }
+        alert('i love you too~');
+    </script>
+</body>
+
+</html>

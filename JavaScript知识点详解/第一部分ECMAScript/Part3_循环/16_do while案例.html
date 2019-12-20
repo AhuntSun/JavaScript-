@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.打印人的一生
+        var i = 1;
+        do {
+            console.log('这个人今年' + i + '岁了');
+            i++;
+        } while (i <= 100)
+
+        //2.计算1~100之间的和
+        var j = 1;
+        var sum = 0;
+        do {
+            sum += j;
+            j++;
+        } while (j <= 100)
+        console.log(sum);
+
+        //3.持续弹出"do you love me？"输入框
+        do {
+            var meg = prompt('do you love me？');
+
+        } while (meg !== 'YES')
+        alert('i love you too！');
+        //这个案例中do while比while要简单，不用先定义变量 来判断，再执行
+        //三种循环大部分情况可以相互替代；
+        //while 和 do while 可以做更加复杂的条件判断比for 灵活一些；最为常用的是for循环
+    </script>
+</body>
+
+</html>
