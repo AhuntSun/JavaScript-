@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //数组(Array)是一组数据的集合 是一种一组数据存放在单个变量名下的存储方式
+        //1.利用new 关键字 创建数组
+        var arr = new Array(); //创建了一个空的数组
+
+        //2.利用字面量(即[])创建数组
+        var arr = []; //同样创建了一个空的数组
+        var arr1 = [1, 2, 'github', true]; //在数组里可以放任何数据类型的数据
+        //3.数组里面的数据一定要用 , 逗号分隔
+        //4.里面的数据叫做 数组元素
+        //5.获取数组元素
+        console.log(arr1);
+        //利用数组的索引(下标)来表示(正式说法为：访问)数组中的对应元素，索引从0开始
+        console.log(arr1[2]); //github
+        console.log(arr1[3]); //true
+
+        var arr2 = ['Tom', 'Tim', 'Mary'];
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+        console.log(arr2[2]);
+        console.log(arr2[3]); //因为没有这个索引的数组元素所以输出结果是undefined
+    </script>
+</body>
+
+</html>

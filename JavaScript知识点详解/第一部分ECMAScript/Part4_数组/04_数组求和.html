@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0;
+        var arr = [2, 6, 1, 4, 7];
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i]; //我们加的是数组元素，不是计数器
+        }
+        console.log('数组arr全部元素的和为：' + sum);
+        console.log('数组arr全部元素的平均值为：' + sum / arr.length);
+        console.log(sum, sum / arr.length); //想要输出多个变量用逗号隔开
+    </script>
+</body>
+
+</html>

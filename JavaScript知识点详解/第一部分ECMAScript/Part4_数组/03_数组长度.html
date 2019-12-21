@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //数组长度
+        var arr = [1, 2, 3, 4, 5, 6, 'blue', 'yellow', 'pink', 'red'];
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+        console.log(arr.length);
+        //1.数组的长度是元素个数 ，不要和索引号混淆，比如arr有七个元素，索引为：0~6；而数组长度为7；所以i < arr.length 不能是<=
+        //2.遍历数组时：把for循环里面的计数器i，当做索引号使用，arr[i]表示的是数组中的第(i+1)个元素
+    </script>
+</body>
+
+</html>

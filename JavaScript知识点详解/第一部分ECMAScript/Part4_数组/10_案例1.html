@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //删除数组指定元素(如本题的0)
+        var arr = [2, 0, 1, 5, 0, 213, 0, 4, 2, 0, 67, 0, 6, 0];
+        var arr1 = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                arr1[arr1.length] = arr[i]; //由于数组的length属性总比索引号大1所以这样是可行的
+            }
+        }
+        console.log(arr1);
+    </script>
+</body>
+
+</html>

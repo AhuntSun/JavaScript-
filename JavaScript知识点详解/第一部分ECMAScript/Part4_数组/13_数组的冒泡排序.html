@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //冒泡排序：是一种算法，把一系列的数据按照一定的顺序进行排列显示(从大到小，或者从小到大)
+        //运用两个for循环来实现：外层for循环管冒泡次数；内层for循环管每趟数组元素间交换的次数
+        var arr = [6, 5, 4, 3, 2, 1];
+        for (var i = 0; i <= arr.length - 1; i++) { //外层循环管冒泡总次数：规律为：要冒 arr.length-1 次泡
+            for (var j = 0; j <= arr.length - i - 1; j++) { //里层循环管每次冒泡，元素交换的次数(相当于多少列) 
+                //每一趟交换次数的规律为：索引为0的元素交换5次；1-4；2-3；3-2：所以规律为交换次数=arr.length-j-1
+                //内部交换两个数组元素的值 一定是前一个元素与后一个元素比较
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log('从小到大排序后的数组为：' + arr);
+        //总结：冒泡循环分三步
+        //1.一共的冒泡次数，我们用外层for循环
+        //2.每一次冒泡交换次数，我们用里层for循环
+        //3.最后交换两个变量。
+        // 注： 两层循环都从0开始， 比较时一定是用前面的一个元素和后面的元素比
+        /*所谓一次冒泡指的是，索引号为0的数组元素，移动到索引号为arr.length-1的过程。比如arr数组中6移动到1之后的过程称之为一次冒泡。
+        而一次冒泡过程元素交换的次数指的是，为了完成一次冒泡，该元素要与后面(或前面)的元素比较，交换多少次*/
+    </script>
+</body>
+
+</html>
