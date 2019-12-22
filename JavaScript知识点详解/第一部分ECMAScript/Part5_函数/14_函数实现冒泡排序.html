@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //利用函数进行冒泡排序
+        function sort(arr) {
+            for (var i = 0; i < arr.length - 1; i++) { //外层循环决定冒泡次数
+                for (var j = 0; j < arr.length - i - 1; j++) { //内层循环决定每次冒泡元素交换次数
+                    if (arr[j] > arr[j + 1]) { //这是升序排列；降序排列为：arr[j] < arr[j + 1]
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        var arr1 = sort([91, 12, 342, 3, 6, 123, 63, 1, 9]);
+        console.log(arr1);
+        /*冒泡排序由三部分组成
+            1.外层循环，重点掌握冒泡次数
+            2.内层循环，重点掌握每次冒泡的元素交换次数
+            3.定义一个临时变量，交换数组中的两个元素
+        */
+    </script>
+</body>
+
+</html>

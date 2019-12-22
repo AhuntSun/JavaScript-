@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //函数形参实参个数匹配
+        function getSum(num1, num2) {
+            console.log(num1 + num2);
+
+        }
+        //1,如果实参的个数和形参的个数一致则正常输出结果
+        getSum(1, 2);
+        //2,如果实参的个数多于形参的个数 最终会去到形参所需的实参个数
+        getSum(1, 2, 3); //只取前两个实参
+        //3.实参的个数小于形参个数时 多于的形参被定义为undefined(不传值默认undefined)
+        //形参可以看作是不用声明的变量 num2是一个变量但是没有接收值 所以该变量值为undefined，运算后结果为NaN
+        getSum(1); //NaN
+        //尽量要让形参和实参个数相匹配
+    </script>
+</body>
+
+</html>

@@ -10,13 +10,16 @@
 
 <body>
     <script>
-        var arr = ['blue', 'yellow', 'pink', 'red'];
-        var str = '';
-        var stp = '~';
-        for (var i = 0; i < arr.length; i++) {
-            str += arr[i] + stp;//数组元素通过 + 运算符拼接成一个字符串
+        //利用函数求两数最大值
+        function getMax(num1, num2) {
+            /* if (num1 > num2) {
+            return num1;
+            } else {
+            return num2;
+            } */
+            return num1 > num2 ? num1 : num2;
         }
-        console.log(str);
+        console.log(getMax(10, 3));
     </script>
 </body>
 

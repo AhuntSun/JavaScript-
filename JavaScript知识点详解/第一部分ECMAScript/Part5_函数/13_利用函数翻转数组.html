@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //翻转数组：实质是颠倒索引号及其对应的数组元素
+        function reverse(arr) {
+            var newArr = [];
+            for (var i = arr.length - 1; i >= 0; i--) {
+                newArr[newArr.length] = arr[i]; //这种方式巧妙在于newArr.length从0开始，符合索引的规则
+            }
+            return newArr;
+        }
+
+        var arr1 = reverse([9, 12, 54, 82, 123, 2, 6, 3]);
+        console.log(arr1);
+        var arr2 = reverse(['Tim', 'pink', 'red', 'Tom']);
+        console.log(arr2);
+    </script>
+</body>
+
+</html>

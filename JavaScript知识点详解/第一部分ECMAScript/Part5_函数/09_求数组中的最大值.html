@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getMax(arr) {
+            var max = arr[0];
+            for (var i = 1; i <= arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        var arr1 = [14, 12, 41, 51, 66, 12, 75, 12]; //实参是一个数组 送过去
+        //可以这样写 var re = getMax([14, 12, 41, 51, 66, 12, 75, 12]);用一个变量来接收函数的返回结果
+        console.log(getMax(arr1)); //75
+    </script>
+</body>
+
+</html>

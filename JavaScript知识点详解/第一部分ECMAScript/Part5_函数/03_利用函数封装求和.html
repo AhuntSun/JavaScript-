@@ -10,13 +10,17 @@
 
 <body>
     <script>
-        var arr = ['blue', 'yellow', 'pink', 'red'];
-        var str = '';
-        var stp = '~';
-        for (var i = 0; i < arr.length; i++) {
-            str += arr[i] + stp;//数组元素通过 + 运算符拼接成一个字符串
+        //1.声明函数
+        function getSum() {
+            var sum = 0;
+            for (var i = 1; i <= 100; i++) {
+                sum += i;
+            }
+            console.log(sum);
         }
-        console.log(str);
+        //2.函数调用
+        //优点 一次定义 可以多次调用
+        getSum();
     </script>
 </body>
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //函数：就是封装了一端可被重复调用执行的代码块，通过此代码块可以实现大量代码的重复使用
+        //示例：封装一个求和函数
+        function getSum(num1, num2) {
+            var sum = 0;
+            for (var i = num1; i <= num2; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        getSum(1, 100);
+        getSum(10, 50);
+    </script>
+</body>
+
+</html>

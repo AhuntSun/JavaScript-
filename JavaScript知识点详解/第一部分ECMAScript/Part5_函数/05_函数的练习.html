@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //利用函数求任意两个数的和
+        function getSum(num1, num2) {
+            console.log(num1 + num2);
+        }
+        getSum(1, 23);
+        //利用函数求任意两个数之间的和
+        function getSum2(start, end) { //形参可以看做是不用声明的变量
+            var sum = 0;
+            for (var i = start; i <= end; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        getSum2(1, 100);
+        getSum2(10, 100);
+    </script>
+</body>
+
+</html>
