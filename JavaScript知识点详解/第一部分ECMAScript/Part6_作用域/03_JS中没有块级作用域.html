@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //JS中只有 全局作用域 和 局部作用域 没有块级作用域
+        //JS 也是在 es6的时候新增的块级作用域
+        //块级作用域：{用花括号括起来的}
+        //java
+        /*  if(xx){
+             int num =10;
+         } */
+        //外面是不能调用num的
+        //JS
+        if (3 < 5) {
+            var num = 10;
+        }
+
+        function fn() {
+            var num2 = 20;
+        }
+        console.log(num); //外面可以用(注意与局部变量的区别(例如函数里面的局部变量，外面不能访问))
+        console.log(num2); //报错
+    </script>
+</body>
+
+</html>

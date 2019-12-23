@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var dog = {
+            uname: '可可',
+            type: '阿拉斯加犬',
+            age: 5,
+            color: 'pink', //最后一项属性后面的逗号 可加可不加
+            fei: function() {
+                console.log('~汪汪汪~');
+            }, //方法后面有方法时一定要加逗号隔开 只有最后一个对象属性或方法才有权利 可加可不加逗号
+            eat: function() {
+                console.log('~eating~');
+            }
+        }
+        console.log(dog.color);
+        dog.fei();
+        console.log(dog['type']);
+        dog.eat();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //创建多个人 相同的属性：名字 ，年龄 ，方法 相同的方法：唱歌
+        //构造函数的语法格式
+        /* function 构造函数名(){
+        this.属性=值;//this指向当前的对象
+        this.方法= function(){}
+        }
+        new 构造函数名(); */ //调用构造函数的方法 比普通调用函数前面多了个new
+
+        //1.构造函数
+        function Star(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(song) {
+                console.log(song);
+            }
+        }
+
+        // 2.对象 是具体的事物
+        var Tom = new Star('章鱼哥', 18, '男'); //利用构造函数生成Tom这个对象
+        console.log(typeof Tom); //输出object 说明构造函数返回一个对象
+        console.log(Tom.name);
+        console.log(Tom['sex']);
+        Tom.sing('吹喇叭~~');
+
+        var Tim = new Star('派大星', '45', '男');
+        console.log(Tim.name);
+        console.log(Tim['age']);
+        Tim.sing('抓水母~');
+
+        //(1)构造函数名字首字母大写 规范
+        //(2)构造函数不需要 return 就能返回结构
+        //(3)调用构造函数 必须使用 new
+        //(4)只要new Star() 调用函数就创建了一个对象 {}
+        //(5)属性和方法前面必须加 this：表示指向当前调用它的对象 ，比如：var Tom = new Star('章鱼哥', 18, '男');对象Tom调用构造函数 那么this就指向Tom这个对象
+    </script>
+</body>
+
+</html>

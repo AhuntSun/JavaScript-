@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.构造函数 明星 泛指 某一大类 类似于C++里面的类
+        function Star(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(song) {
+                console.log(song);
+
+            }
+        }
+        // 2.对象 特指某一个 是具体的事物
+        var ldh = new Star('刘德华', 18, '男'); //利用构造函数生成ldh这个对象
+        //3.我们利用构造函数 创建对象的过程也称为对象的实例化
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.问
+        // console.log(num);//undefined
+
+        //2.问
+        console.log(num); //undefined: 坑1
+        var num = 10;
+        //相当于执行了以下代码
+        /* var num;
+        console.log(num);
+        num = 10;//所以输出结果是undefined */
+
+
+        //3.问
+        fn1(); //在函数定义的 上面或下面调用都没问题
+        function fn1() {
+            console.log(11);
+        }
+        //由于函数提升：相当于以下代码：
+        /* function fn1() {
+            console.log(11);
+        }
+        fn1();  */ //所以无论fn1的调用语句在函数声明上面还是下面都可以
+
+
+        //4.问
+        fun(); //报错 坑2
+        var fun = function() { //fun 是变量，不是函数名
+                console.log(22); //函数表达式
+
+            }
+            //相当于执行了以下代码
+            /* var fun;
+            fun(); //没有给变量指定函数就调用  所以会报错
+            fun = function() {
+                console.log(22);
+
+            } */
+            //*所以函数表达式(声明函数的第二种方式)：调用语句fun();必须写在函数表达式的下面
+
+
+        //1.**JavaScript代码是由浏览器中的JavaScript解析器来执行的，JavaScript解析器在运行JavaScript代码的时候分为两步：1、预解析；2、代码执行
+        //(1).什么是预解析？  js引擎会把js里面所有的var 和 function提升到**当前**作用域(注意了有两种作用域：局部作用域和全局作用域)的最前面
+        //(2).代码执行：按照代码书写的顺序从上往下执行。
+        //2.预解析分为：变量预解析 (变量提升)   和 函数预解析 (函数提升)
+        //(1)变量提升 就是把所有的变量声明提升到当前的作用域最前面  不提升赋值操作
+        //(2)函数提升   就是把所有的函数声明提升到当前作用域的最前面  不调用函数
+
+        //***总结：利用预解析：当与变量相关的操作时，调用变量语句一定要在变量初始化语句之后
+    </script>
+</body>
+
+</html>

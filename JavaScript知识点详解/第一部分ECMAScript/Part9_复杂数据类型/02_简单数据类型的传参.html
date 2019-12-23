@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = 10; //在栈开辟空间 里面的值为10 简单数据类型变量num指向该空间
+        num = 20; //把该空间里面的值由10改为20
+        console.log(num);
+
+        function fn(a) {
+            a++;
+            console.log(a);
+        }
+        var x = 10; //在栈开辟空间 里面的值为10 简单数据类型变量x指向该空间
+        fn(x); //把x 即10传进函数 相当于 a=10 所以新变量a 在栈开辟并指向了一个新空间里面的值为10；接下来函数里面的操作都是针对变量a 的 与传进来值的 x没有任何关系；简单地说就是 形参不能改变传进来实参的值;  复杂数据类型(引用类型)则不一样 见后
+        console.log(x);
+    </script>
+</body>
+
+</html>

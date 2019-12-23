@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //遍历对象
+        var obj = {
+                name: 'pink',
+                age: 18,
+                sex: '男',
+                fn: function() {}
+            }
+            // console.log(obj.name);
+            // console.log(obj.age);
+            // console.log(obj.sex);
+
+        //for_in 遍历对象，也可以遍历数组，不过主要用于遍历对象
+        // for (变量 in 对象){}
+        for (var k in obj) {
+            console.log(k); //k 变量 *输出的是 属性名
+            console.log(obj[k]); //注意书写规范 obj[k] *得到的是属性值
+
+        }
+        //k是 for in 里面的变量,该变量可以自由命名,一般我们喜欢用 k 或者 是 key来命名(就像循环里面的i一样)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //利用 new Object创建对象
+        var obj = new Object(); //创建了一个空的对象
+        obj.uname = 'Tom';
+        obj.age = 19;
+        obj.sex = '男';
+        obj.sayHi = function() {
+            console.log('Hi');
+        };
+        //(1)利用等号 = 赋值的方法 添加对象的属性和方法
+        //(2)每个属性和方法之间分号隔开
+        console.log(obj.uname);
+        console.log(obj['sex']);
+        obj.sayHi(); //这个分号有时可以不加 但是为了规范一律加
+
+        //对象练习
+        var kirito = new Object();
+        kirito.uname = '';
+        kirito.age = 19;
+        kirito.sex = '男';
+        kirito.skill = function() {
+            console.log('星爆弃疗斩~~');
+        };
+        console.log(kirito.age);
+        console.log(kirito['sex']);
+        kirito.skill();
+    </script>
+</body>
+
+</html>

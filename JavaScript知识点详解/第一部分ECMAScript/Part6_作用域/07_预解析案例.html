@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //案例1 先进行预解析的变量和函数提升 在按照作用域链的方式寻找变量
+        var num = 10;
+        fun();
+
+        function fun() {
+            console.log(num);
+            var num = 20;
+
+        }
+        //相当于执行了以下操作
+        /*  var num; //外部的变量提升
+         function fun() {
+             var num; //内部的变量提升
+             console.log(num); //所以输出结果为undefined
+             num = 20;
+
+         }
+         num = 10;
+         fun(); //输出undefined */
+
+        console.log('------------------------------------------------------');
+
+        //案例2
+        var num2 = 10;
+
+        function fn() {
+            console.log(num2);
+            var num2 = 20;
+            console.log(num2);
+
+        }
+        fn();
+        //相当于执行以下代码
+        //**需要注意预解析中的变量提升和函数提升；是提升到当前作用域的最前面 而作用域又分为局部作用域和全局作用域；所以预解析中的变量提升和函数提升分为两种 ：全局作用域中的提升 和 局部作用于中的提升
+        /*  var num; //外层的变量提升
+         function fn() {
+             var num;
+             console.log(num); //undefined
+             num = 20;
+             console.log(num); //20
+
+         }
+         num = 10;
+         fn(); */
+
+        console.log('------------------------------------------------------');
+
+        //案例三
+        var a1 = 18;
+        f1();
+
+        function f1() {
+            var b1 = 9;
+            console.log(a1);
+            console.log(b1);
+            var a1 = '123';
+
+        }
+        // 相当于以下代码：
+        /*       var a1;
+
+              function f1() {
+                  var b1;
+                  var a1;
+                  b1 = 9;
+                  console.log(a1); //undefined
+                  console.log(b1); //9
+                  a1 = '123';
+              }
+              a1 = 18;
+              f1(); */
+
+        console.log('------------------------------------------------------');
+
+        //案例4 经典面试题
+        f2();
+        console.log(c);
+        console.log(b);
+        console.log(a); //报错
+
+        function f2() {
+            var a = b = c = 9;
+            //相当于 var a=9 ;b=9; c=9; b和c直接赋值 没有var声明 相当于 全局变量,所以外面的语句可以访问
+            //集体声明应该是：var a=9,b=9,c=9;这样写才是：var a=9;var b=9; var c=9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        // 相当于以下代码：
+        /* function f2() {
+            var a;
+            a = b = c = 9;
+            console.log(a);//9
+            console.log(b);//9
+            console.log(c);//9
+        }
+        f2();
+        console.log(c);//9 因为：b和c没有var 当全局变量，所以函数外可以访问
+        console.log(b);//9
+        console.log(a); 由于a是局部变量外部不能访问，改该语句出错
+        */
+    </script>
+</body>
+
+</html>

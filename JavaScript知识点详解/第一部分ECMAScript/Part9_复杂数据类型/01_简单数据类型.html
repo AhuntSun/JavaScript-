@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // JS分为简单数据类型和复杂数据类型
+        //1. 简单数据类型又叫做基本数据类型或者值类型，复杂类型又叫做引用类型简单数据类型：string Number(包括两个特殊值infinity和NaN) boolean undefined null
+        //2.引用类型：也叫作复杂数据类型，在存储时变量中存储的仅仅是地址(引用)，因此叫做引用数据类型，通过new创建的对象都属于(系统对象和自定义对象)
+
+        // 堆栈空间分配：
+        //1.栈(操作系统)：简单数据类型存放在栈里面，栈空间小，速度快
+        //2.堆(操作系统)：复杂数据类型存放在堆里面，堆空间大，速度慢
+
+        //简单数据类型null
+        var timer = null;
+        console.log(typeof timer); //返回的是object
+        //应用场合：如果某个变量打算以后存对象但是暂时没对象给它 这个时候就给它赋值null
+        //1.简单数据类型是直接存放在栈空间里面的，里面存放的是值
+        //2.复杂数据类型首先在栈里面存放地址 十六进制表示 然后这个地址指向堆里面的数据
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //王者构造函数
+        function King(uname, utype, blood) {
+            this.name = uname;
+            this.type = utype;
+            this.blood = blood;
+            this.attack = function(attack) {
+                console.log(attack);
+            }
+        }
+
+        //廉颇
+        var lp = new King('廉颇', '坦克型', 500);
+        console.log(lp['name']);
+        console.log(lp.blood);
+        console.log(lp.type);
+        lp.attack('近战坦克英雄');
+
+        console.log('*************华丽的分割线**************');
+
+        //后羿
+        var hy = new King('后羿', '射手型', 200);
+        console.log(hy.name);
+        console.log(hy['blood']);
+        console.log(hy.type);
+        hy.attack('远程攻击英雄');
+    </script>
+</body>
+
+</html>

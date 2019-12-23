@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(name) {
+            this.name = name;
+        }
+        var p = new Person("刘德华"); //p是变量属于复杂数据类型(引用类型)变量，在栈上开辟并指向一个空间 不同的是里面存的是十六进制地址 该地址指向 对应的在堆内存中开辟的空间 里面存放p(对象)包含的多种数据 这里只有一个name属性; 从这里就可以窥见一二 堆内存大 速度较慢 所以适合用来存放类似于 p表示的对象 这种具有多数据的复杂数据类型。
+
+        console.log(p.name); //顺序1：输出什么？"刘德华"
+        f1(p);
+
+        function f1(x) { //x=p 即形参也属于对象变量 即属于引用类型或复杂数据类型; x=p 相当于把p的地址复制给了x,简单点说就是x和p 虽然在栈内存中开辟了两个完全不一样的空间,但是里面存的十六位地址是一样的。
+            console.log(x.name); //顺序2：输出什么？ "刘德华"
+            x.name = "张学友"; //同上面所说 x在栈内存上的空间里的地址和p栈空间内地址 指向了同一块堆内存，这里修改了里面的name属性,相当于,把p指向的堆内存属性也修改了,(因为指向的是同一块堆内存); 所以,结论为：引用类型变量的形参可以改变传进来的实参。
+            console.log(x.name); //顺序3：输出什么？ "张学友"
+        }
+        console.log(p.name); //顺序4：输出什么？ "张学友"。因为对应的堆内存数据已发生改变
+
+        // ***总结就是：值类型(简单数据类型)传递的是值; 引用类型(复杂数据类型)传递的是地址！
+        //第一部分完结撒花~~~
+    </script>
+</body>
+
+</html>

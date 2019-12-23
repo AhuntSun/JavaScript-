@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //JavaScript作用域：就是代码名字(变量)在某个范围内起作用和效果，目的是提高程序的可靠性，减少命名冲突
+        //2.JS的作用域(es6) 之前： 全局作用域 局部作用域(函数作用域)
+        //3.全局作用域 整个script标签 或者是单独的js文件
+        var num = 10;
+        console.log(num);
+
+        //4.局部作用域(函数作用域)：在函数内部就是局部作用域 这个代码的名字 只在函数内部起作用和效果
+        function fn() {
+            //局部作用域
+            var num = 20;
+            var num2 = 30;
+            console.log(num);
+
+        }
+        fn(); //输出的是20
+        console.log(num2); //报错
+        //表明函数外(函数作用域外)无法访问函数内部定义的变量，即函数内部定义的变量作用域为函数作用域，出了函数该变量就没有了定义
+    </script>
+</body>
+
+</html>

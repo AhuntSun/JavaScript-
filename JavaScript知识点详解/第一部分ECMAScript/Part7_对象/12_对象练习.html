@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //创建电脑对象
+        function Computer(color, weight, brand, type) {
+            this.color = color;
+            this.weight = weight;
+            this.brand = brand;
+            this.type = type;
+            this.movie = function(mo) {
+                console.log(mo);
+            }
+            this.music = function(mu) {
+                console.log(mu);
+            }
+            this.game = function(ga) {
+                console.log(ga);
+            }
+            this.coding = function(co) {
+                console.log(co);
+            }
+        }
+
+        var Dell = new Computer('blue', '45kg', 'dell', 'AT-830');
+        for (var k in Dell) { //遍历对象，相当于一次循环
+            console.log(k); //输出属性和方法名字
+            console.log(Dell[k]); //输出属性和方法值 *这是一个循环 输出一次属性或方法名字，再输出该属性或方法的值
+        }
+
+        console.log('****************华丽的分割线******************');
+
+        //创建按钮对象
+        function Button(width, height, background) {
+            this.width = width;
+            this.height = height;
+            this.background = background;
+            this.onclick = function(click) {
+                console.log(click);
+            }
+        }
+        var an = new Button(45, 54, 'pink');
+        for (var k in an) {
+            console.log(k);
+            console.log(an[k]);
+        }
+
+        console.log('****************华丽的分割线******************');
+
+        //创建车对象
+        function Car(weight, color, brand) {
+            this.color = color;
+            this.weight = weight;
+            this.brand = brand;
+            this.carry = function() {
+                console.log('我是载人方法');
+            }
+            this.load = function() {
+                console.log('我可以拉货');
+            }
+            this.gt = function() {
+                console.log('我可以耕田');
+            }
+        }
+        var cz = new Car(2100, 'pink', '宝马');
+        for (var k in cz) {
+            console.log(k);
+            console.log(cz[k]);
+        }
+    </script>
+</body>
+
+</html>
