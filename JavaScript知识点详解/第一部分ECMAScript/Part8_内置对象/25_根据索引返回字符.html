@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //根据位置返回字符
+        //1.charAt(index)   根据指定的索引位置返回字符
+        var str = 'andy'; //因为为基本包装类型 所以有length属性
+        console.log(str.charAt(3)); //'y'
+        //遍历所有的字符
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+
+        //2.charCodeAt(index)  返回相应索引号的字符的ASCII值 目的：判断用户按下了哪个键
+        console.log(str.charCodeAt(2));
+        //3.str[index] H5新增的方法  返回对应索引的值,即把该字符串转化为伪数组。
+        console.log(str[0]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.判断一个对象是否拥有某属性：对象['属性名']
+        var a = {
+            age: 18,
+        }
+        if (a['sex']) {
+            console.log('里面有该属性');
+
+        } else {
+            console.log('没有该属性');
+        }
+
+        console.log('----------------------');
+
+
+        //2.判断一个字符串 'adadjagkasdkasbdkjaadbajks'中出现次数最多的字符，并统计其次数
+        var str = 'adadjagkasdkasbdkjaadbajks';
+        var p = {}; //定义一个空对象
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i); //把字符串中所有的单个字符当做属性 传给变量chars
+            if (p[chars]) { //判断对象p中是否有chars这个元素 chars是字符串中的每一个字符 p[chars]得到的是属性值
+                p[chars]++; //相当于 p[chars] =p[chars]+1;首先p[chars]表示对象中的属性是没有初始值的，+1之后其值就为1;用对象的属性名来计算，遇到相同的元素时没遇到一次为该值加1；由此实现记数。
+            } else {
+                p[chars] = 1;
+            }
+        }
+        console.log(p);
+
+        console.log('---------------------------');
+
+
+        //3.遍历对象
+        var max = 0;
+        var ch = '';
+        for (var k in p) { //for_in多用于遍历对象中的属性和方法
+            //k 得到的是属性名
+            //p[k]得到的是属性值
+            if (p[k] > max) {
+                max = p[k];
+                ch = k;
+            }
+        }
+        // console.log(max);
+        console.log('出现次数最多的字符是' + ch + ',出现的次数是：' + max);
+
+        /* 
+            本例重点在于：
+            if (p[chars]){//先判断对象中有无该变量
+                p[chars]++;//再对该变量进行累加计算
+            }
+            运用对象中的成员变量名来计算
+         */
+    </script>
+</body>
+
+</html>

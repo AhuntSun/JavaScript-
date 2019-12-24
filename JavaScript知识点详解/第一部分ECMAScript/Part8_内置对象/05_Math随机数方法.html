@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.Math对象随机数方法 random()返回一个随机的小数  0<=x<1注意取不到1
+        //2.这个方法里面不跟参数
+        //3.代码验证
+        console.log(Math.random());
+        //4.我们想要得到两个数之间的随机整数 并且 包含这两个整数
+        //Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+        function getRandom(min, max) { //其实很简单 想想就明白了 1的作用是弥补random()取不到1,整体取不到max,加上1再向下取整就能取到max  **重点是记住公式
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+        }
+        console.log(getRandom(1, 10));
+
+        //5.随机点名
+        var arr = ['Mary', 'Mark', 'Vivi', 'Tim', 'Tom'];
+        console.log(arr[getRandom(0, 4)]);
+    </script>
+</body>
+
+</html>

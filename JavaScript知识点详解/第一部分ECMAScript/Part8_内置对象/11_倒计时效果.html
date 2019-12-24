@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //利用时间戳来做倒计时
+        function countDown(time) {
+            var nowTime = +new Date(); //返回的是当前时间总的毫秒数
+            var inputTime = +new Date(time); //返回的是用户输入的时间总的毫秒数
+            var times = (inputTime - nowTime); //times就是剩余时间的总的毫秒数
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+
+            var d = Math.floor(times / (day));
+            d = d < 10 ? '0' + d : d; //补0操作
+            var h = Math.floor((times % (day)) / (hour));
+            h = h < 10 ? '0' + h : h;
+            var m = Math.floor((times % (hour)) / (minute));
+            m = m < 10 ? '0' + m : m;
+            var s = Math.floor((times % (minute)) / (second));
+            s = s < 10 ? '0' + s : s;
+
+            return d + '天' + h + '时' + m + '分' + s + '秒';
+        }
+        console.log(countDown('2019-12-26 00:00:00'));
+        var date = new Date();
+        console.log(date);
+
+        // **重点是积累用毫秒数来计算日期
+    </script>
+</body>
+
+</html>

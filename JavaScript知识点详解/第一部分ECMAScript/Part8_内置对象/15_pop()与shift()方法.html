@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //删除数组中元素的方法：pop() 与 shift()
+        //1.pop() 它可以删除数组的最后一个元素
+        var arr = [1, 2, 3];
+        console.log(arr);
+        console.log(arr.pop());
+        //(1)pop() 可以删除数组的最后一个元素 记住一次只能删除一个元素
+        //(2)pop() 没有参数
+        //(3)pop() 的返回值为删除的元素
+        //(4)原数组也会发生变化
+
+        //2. shift() 它可以删除数组的第一个元素
+        var arr2 = [1, 2, 3];
+        console.log(arr2);
+        console.log(arr2.shift());
+        console.log(arr2);
+        //(1)shift() 可以删除数组的第一个元素 记住一次只能删除一个元素
+        //(2)shift() 没有参数
+        //(3)shift() 的返回值为删除的元素
+        //(4)在后面调用了方法也会影响到前面输出的原数组。
+    </script>
+</body>
+
+</html>

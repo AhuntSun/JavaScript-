@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //添加删除数组元素方法
+        //1.push();在数组的末尾添加一个或者多个数组元素 push 推
+        var arr = [1, 2, 3];
+        // arr.push(4);
+        // arr.push('pink');
+        console.log(arr);
+        console.log(arr.push(4, 'pink')); //同时在数组末尾追加了两个数组元素
+
+        //(1)可以给数组追加新的元素
+        //(2)push() 参数直接写数组元素
+        //(3)push() 的返回值为新数组的长度
+        //(4)原数组也会发生变化
+
+        //2.unshift() 在数组的开头添加一个或多个数组元素
+        var arr2 = [1, 2, 3];
+        arr2.unshift('red');
+        console.log(arr2);
+        console.log(arr2.unshift('black'));
+        //(1)可以给数组的开头 追加新的元素
+        //(2)unshift() 参数直接写数组元素
+        //(3)unshift() 的返回值为新数组的长度
+        //(4)原数组也会发生变化
+    </script>
+</body>
+
+</html>

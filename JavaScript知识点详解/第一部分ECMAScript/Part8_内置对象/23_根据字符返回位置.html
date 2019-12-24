@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //根据字符返回位置 indexOf()方法
+        //str.indexOf('要查找的字符',[起始的位置])    []表示可选，可有可无
+        var str = '改革春风吹满地,春天来了';
+        console.log(str.indexOf('春')); //当找到第一个指定字符就返回其索引，并停止查找
+        console.log(str.indexOf('春', 3)); //从索引号为3的位置往后查找，可以发现类似的索引操作都是包含起始索引而不包含结束索引值的，即[)的形式。
+    </script>
+</body>
+
+</html>

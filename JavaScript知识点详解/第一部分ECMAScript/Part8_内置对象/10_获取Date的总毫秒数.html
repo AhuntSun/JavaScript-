@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //获取Date总的毫秒数(时间戳：永远不重复，通常用于加密) 不是当前的毫秒数 而是距离1970年1月1日到现在一共经历了多少毫秒
+        //1.通过Date对象的 valueOf() 和 getTime()方法都可以获取
+        var date = new Date();
+        console.log(date.valueOf());
+        console.log(date.getTime()); //就是现在的时间距离1970年1月1日总的毫秒数
+        //2.简单的写法
+        var date1 = +new Date(); //这个+new Date(),返回的就是总的毫秒数,最常用的写法(记住加号的用法);+号可以理解为第1中方式，创建对象调用方法的简写。
+        console.log(date1);
+
+        //3.H5新增的方法 获得总的毫秒数
+        console.log(Date.now()); //注意now()是Date类的方法(静态方法)
+    </script>
+</body>
+
+</html>

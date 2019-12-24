@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.替换字符 replace('被替换的字符','替换为的字符')
+        var str = 'andyandy';
+        console.log(str.replace('a', 'd')); //只会替换第一个字符
+
+        //有一个字符串 'aosdaosoafaofsoasfaofoasfo' 要求把里面的o替换为 * 
+        var str1 = 'aosdaosoafaofsoasfaofoasfo';
+        while (str1.indexOf('o') !== -1) {
+            str1 = str1.replace('o', '*'); //返回一个新的字符串，会改变原本的字符串
+        }
+        console.log(str1);
+    </script>
+</body>
+
+</html>

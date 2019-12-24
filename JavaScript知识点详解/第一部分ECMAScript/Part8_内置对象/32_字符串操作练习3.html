@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "adadaduga44sdkafkas44fhaaigfha144ufsgssgssafi33443g4344334g3444";
+        //1.截取指定开始位置到结束位置的字符串，如：取得1-5的字符串
+        function cut(index1, index2) {
+            var str2 = str;
+            str2 = str2.substr(index1, index2);
+            console.log(str2);
+        }
+        cut(1, 5); //截取的是索引为1,2,3,4,5的元素
+
+        //2.找出出现次数最多的字符并且统计其个数
+        function most(str4) {
+            var str3 = str4;
+            var p = {};
+            for (var i = 0; i <= str3.length; i++) {
+                var chars = str3.charAt(i);
+                if (p[chars]) {
+                    p[chars]++;
+                } else {
+                    p[chars] = 1;
+                }
+            }
+            //遍历对象
+            var max = 0;
+            var ch = '';
+            for (var k in p) {
+                if (p[k] > max) {
+                    max = p[k]; //p[k]表示属性值;k表示属性名
+                    ch = k;
+                }
+            }
+            console.log('出现最多的字符是：' + ch + '，出现的次数是：' + max);
+        }
+        most(str);
+    </script>
+</body>
+
+</html>

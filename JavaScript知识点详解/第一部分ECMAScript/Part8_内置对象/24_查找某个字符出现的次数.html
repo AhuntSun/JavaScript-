@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //查找字符串中某个字符出现的次数
+        //核心算法：先找出第一个字符出现的位置
+        //只要indexOf返回的不是-1就继续查找，从当前索引+1处继续查找
+        var str = "abcsaabcabacasfdafabggkdjavbia";
+        var index = str.indexOf('a');
+        var num = 0;
+        // console.log(index);
+        while (index !== -1) {
+            console.log(index);
+            num++;
+            index = str.indexOf('a', index + 1) //从index+1处继续查找
+        }
+        console.log('a出现的次数是:' + num); //当变量在前面的字符串尾部这样写
+        // console.log('a出现的'+num+'次数是');//当变量在出现在字符串中间按照之前的技巧写
+        console.log('*****************华丽的分割线*******************');
+        //练习：['red','blue','red','green','red','pink','red'],求'red'出现的位置和次数
+        var arr = ['red', 'blue', 'red', 'green', 'red', 'pink', 'red'];
+        var index2 = arr.indexOf('red');
+        var num1 = 0;
+        while (index2 !== -1) {
+            console.log(index2);
+            index2 = arr.indexOf('red', index2 + 1);
+            num1++
+        }
+        console.log('red出现的次数是:' + num1);
+    </script>
+</body>
+
+</html>

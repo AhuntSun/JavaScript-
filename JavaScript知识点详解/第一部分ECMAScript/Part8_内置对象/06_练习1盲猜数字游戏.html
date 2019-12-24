@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.生成1-10的随机整数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min; //记住这个公式
+        }
+        //  console.log(getRandom(1, 10));
+        /*  var random = getRandom(1, 10);
+         flag = false;
+         while (!flag) {
+             var num1 = prompt('你来猜一个1~10之间的整数');
+             var num = parseInt(num1);
+             if (num > random && num <= 10) {
+                 alert('你猜大了~');
+             } else if (num < random && num > 0) {
+                 alert('你猜小了');
+             } else if (num == random) {
+                 alert('你猜对了~恭喜');
+                 flag = true;
+                 // break;//使用break结束循环也可以
+             } else {
+                 alert('请输入1~10之间的整数');
+             }
+         } */
+        // 改良版：要求只有10次机会并且 每一次猜错显示答案
+
+        function guess() {
+            for (var i = 1; i <= 10; i++) {
+                var random = getRandom(1, 10); //每一次循环都产生不同的随机数，真正实现1/10的中奖率
+                var num1 = prompt('你来猜一个1~10之间的整数');
+                var num = parseInt(num1); //把prompt返回的string型数据转换为number型
+                if (num > random && num <= 10) {
+                    alert('你猜大了~');
+                    alert('正确答案是:' + random + '\n你还有' + (10 - i) + '次机会');
+
+                } else if (num < random && num > 0) {
+                    alert('你猜小了');
+                    alert('正确答案是:' + random + '\n你还有' + (10 - i) + '次机会');
+                } else if (num == random) {
+                    alert('你猜对了~恭喜');
+                    break;
+                    //只有猜对时才使用break结束循环,否则一直猜直到机会用完
+                } else {
+                    alert('请输入1~10之间的整数');
+                }
+            }
+            if (num != random) {
+                alert('很遗憾你10次机会用完了!');
+            }
+        }
+        guess();
+        while (true) {
+            var num = prompt('游戏结束\n1.继续游戏\n2.退出游戏');
+            if (num == 1) {
+                guess();
+            } else if (num == 2) {
+                alert('欢迎再次光临~');
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>

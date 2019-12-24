@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //数组转换为字符串
+        //1.toString()将数组转换为字符串
+        var arr = [1, 2, 3];
+        console.log(arr.toString()); //1,2,3
+
+        //2.join(分隔符)
+        var arr1 = ['green', 'pink', 'blue', 1, 2, 3, 4];
+        console.log(arr1.join()); //默认逗号为分隔符
+        console.log(arr1.join('~')); //注意分隔符要写成字符串
+        console.log(arr1.join('&')); //经常使用该符号
+
+        console.log('--------------------------');
+
+        //截取数组；slice()方法，不会改变原数组
+        console.log(arr1.slice(0, 2)); //截取对应项索引范围内的元素组成的数组，注意截取的元素包括开始的索引，不包括结束的索引即[0,2),即截取的是索引号为0,1的元素
+        console.log(arr1.slice()); //不传参数时返回整个数组
+        console.log(arr1); //该方法不会改变原来的数组
+
+        console.log('--------------------------');
+
+        //删除数组：splice()方法，会改变原数组
+        var arr2 = ['green', 'pink', 'blue', 1, 2, 3, 4];
+        console.log(arr2.splice(1, 5)); //返回被删除的元素组成的数组，删除元素的索引号为[1,5];即1,2,3,4,5
+        console.log(arr2.splice()); //无参返回空数组
+        console.log(arr2);
+
+        console.log('--------------------------');
+
+        //连接数组方法：concat()
+        var arr3 = [5, 6, 7];
+        var arr4 = [1, 2, 3, 4]
+        console.log(arr3.concat()); //连接字符串，不带参数时返回原数组
+        console.log(arr4.concat(arr3)); //返回一个新数组
+    </script>
+</body>
+
+</html>

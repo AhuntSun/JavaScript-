@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //字符串的不可变性
+        //指的是字符串变量里面的值不可变，虽然看上去可以改变内容，但其实是地址变了，内存中新开辟了一个内存空间
+
+        var str = 'andy'; //开辟了一个栈空间，里面存放数据'andy'
+        console.log(str);
+        str = 'red'; //又开辟了一个栈空间，里面存放数据'red'
+        //因为字符串的不可变 不要大量的拼接字符串，这样会不断开辟内存空间 浪费性能
+        /*  var str='';
+         for(var i=1;i<=101111111110;i++){//例如你这样写 电脑会卡死
+             str+=i;
+         }
+         console.log(str); */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "adadaduga44sdkafkas44fhaaigfha144ufsgssgssafi33443g4344334g3444";
+        //1..查找指定字符是否在以上字符串中存在 如：i，c,b等
+        function exist(ch) {
+            if (str.indexOf(ch) !== -1) {
+                console.log('str中存在该字符');
+            } else {
+                console.log('str中不存在该字符');
+            }
+        }
+        exist('i');
+        exist('c');
+        exist('b');
+
+        //2.替换指定的字符，如：g替换为22，ss替换为b等操作方法
+        function replace(ch, zh) {
+            //var str1 = str;
+            while (str.indexOf(ch) !== -1) {
+                str = str.replace(ch, zh); //返回一个新的字符串
+            }
+            console.log(str);
+        }
+        replace('g', '--');
+        replace('ss', '**');
+        console.log(str); //原数组已发生变化
+    </script>
+</body>
+
+</html>

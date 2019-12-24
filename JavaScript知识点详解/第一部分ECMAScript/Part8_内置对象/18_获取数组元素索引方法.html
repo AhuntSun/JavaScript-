@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //返回数组元素索引号方法有 indexOf(数组元素) 和 lastIndexOf(数组元素)
+        //1.indexOf(数组元素) 作用就是返回该数组元素的索引号
+        //只返回第一个满足条件的索引号
+        //找不到元素就返回-1
+        var arr = ['red', 'green', 'pink', 'blue', 'blue', 'blue'];
+        var arr1 = ['red', 'green', 'pink', 'blur', 'bue'];
+        console.log(arr.indexOf('blue')); //3
+        console.log(arr1.indexOf('blue')); //-1
+
+        //2.lastIndexOf(数组元素) 作用就是返回该数组元素的正索引号，若该数组元素有多个，返回索引号最大的那一个元素的索引;找不到也返回-1。
+        console.log(arr.lastIndexOf('blue')); //5
+        console.log(arr1.lastIndexOf('blue')); //-1
+    </script>
+</body>
+
+</html>

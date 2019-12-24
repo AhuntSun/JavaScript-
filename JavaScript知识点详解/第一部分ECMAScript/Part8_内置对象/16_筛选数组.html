@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //筛选数组[1500,1200,2000,2100,1800]其中超过2000的删除
+        var arr = [1500, 1200, 2000, 2100, 1800];
+        var newArray = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] < 2000) {
+                // newArray[newArray.length]=arr[i];这种方式也可以
+                newArray.push(arr[i]);
+            }
+        }
+        console.log(newArray);
+    </script>
+</body>
+
+</html>
