@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            age: 20,
+            say: () => {
+                alert(this.age);
+            }
+        }
+        var age = 100; //这里为window添加age属性，箭头函数就可以调用了
+        obj.say(); //弹出的值为undefined不是20；**这里的obj对象不能产生作用域**，所以箭头函数被定义在了全局作用域中，this指向window，而window没有age属性所以显示undefined
+    </script>
+</body>
+
+</html>

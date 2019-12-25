@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // reduce：汇总,也会遍历数组,一堆出来一个  类似于算个总数,平均数等
+        let arr = [12, 60, 180, 8733];
+        //三个参数，tmp表示迭代一次返回的结果,所以第一次迭代该值为arr[0],index索引为从1开始。
+        //item表示迭代数组的当前值,index表示迭代数组的索引
+
+        //求数组元素和
+        let result = arr.reduce((tmp, item, index) => {
+            alert(tmp + ',' + item + ',' + index); //索引为index，值为item一一对应;tmp为每次迭代返回的值
+            return tmp + item;
+        });
+        console.log(result);
+
+        //求数组元素的平均值
+        let result2 = arr.reduce((tmp, item, index) => {
+            if (index != arr.length - 1) { //不是最后一个数组
+                return tmp + item
+            } else {
+                return (tmp + item) / arr.length;
+            }
+        });
+        console.log(result2);
+    </script>
+</body>
+
+</html>

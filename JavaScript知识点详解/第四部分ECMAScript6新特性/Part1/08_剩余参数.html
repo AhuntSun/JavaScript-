@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //实现任意个数的累加
+        const sum = (...args) => { //记住加三个点表示剩余参数,args是一个数组
+            let total = 0;
+            args.forEach(item => total += item); //由于该箭头函数只有一个形参并且执行语句只有一条,所以可以省略小括号和大括号
+            return total;
+        };
+        console.log(sum(10, 20)); //30
+        console.log(sum(10, 20, 30)); //60
+        //如何实现接收任意个参数呢，其他函数可以使用arguments，箭头函数不行，它可以用剩余参数
+
+        // 剩余参数和解构一起使用
+        let student = ['Tom', 'Mary', 'Mark'];
+        let [s1, ...s2] = student;
+        console.log(s1); //s1接收数组第一个元素
+        console.log(s2); //剩下的元素由s2数组接收
+    </script>
+</body>
+
+</html>

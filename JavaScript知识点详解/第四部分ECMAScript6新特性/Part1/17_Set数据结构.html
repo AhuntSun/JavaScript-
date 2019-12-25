@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Set类似于数组，但是里面的值不能重复，是唯一的(搜索历史关键字的存储)
+        //Set本身是一个构造函数
+        const s1 = new Set(); //空
+        console.log(s1.size); //size属性表示大小
+
+        const s2 = new Set(["a", "b"]); //可以传数组
+        console.log(s2);
+        //可利用set数据结构做数组去重
+        const s3 = new Set(["a", "b", "c", "c"]);
+        console.log(s3.size); //起到了过滤的作用
+        const ary = [...s3]; //先用扩展运算符...拆分set结构，再手动加[]转换为数组，达到数组去重的目的
+        console.log(ary);
+    </script>
+</body>
+
+</html>

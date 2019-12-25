@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //数组解构允许我们按照一一对应的关系从数组中提取值，然后赋值给变量
+        let ary = [1, 2, 3];
+        // ary[0];//旧方法
+        // ary[1];
+        // ary[2];
+
+        let [a, b, c, d, e] = ary; //等号左边的中括号代表解构
+        console.log(a, b, c); //一一对应
+        console.log(d, e); //没有赋值的就输出undefined
+    </script>
+</body>
+
+</html>

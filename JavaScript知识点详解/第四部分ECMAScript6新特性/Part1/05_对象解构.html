@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 对象结构允许我们使用变量的名字匹配对象的属性，匹配成功将对象属性的值赋值给变量
+        let person = {
+            name: 'Tom',
+            age: 20,
+        };
+        //有两种写法：
+        //1.这种写法变量名要与对象里面的属性名相同
+        let {
+            name,
+            age
+        } = person;
+        console.log(name);
+        console.log(age);
+
+        //2.左边的name只做属性匹配，右边的myName才是真正的变量
+        let {
+            name: myName //意思为用这个新对象的name属性匹配person里面的name属性，并且把person中name属性的值赋值给myName
+        } = person;
+        console.log(myName);
+    </script>
+</body>
+
+</html>

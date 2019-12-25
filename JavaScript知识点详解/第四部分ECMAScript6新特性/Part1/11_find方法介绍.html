@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Array的扩展方法find();接收一个函数作为参数，函数有两个形参：item和index，item代表当前循环到的值，index就是当前循环的索引，没用到第二个参数可以省略;方法里返回查找的条件
+        // 用于找出一个符合条件的数组成员，如果没有找到立即返回undefined
+        var ary = [{
+            id: 1,
+            name: 'Tom'
+        }, {
+            id: 2,
+            name: 'Tim'
+        }];
+        let target1 = ary.find(item => item.id == 3);
+        let target2 = ary.find(item => item.id == 2);
+        console.log(target1); //undefined
+        console.log(target2); //Tim
+    </script>
+</body>
+
+</html>

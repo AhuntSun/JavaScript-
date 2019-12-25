@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 用于找出第一个符合条件的数组成员的索引，如果没有就返回-1;参数同样是一个函数;函数返回的是查找条件
+        let ary = [1, 5, 10, 15];
+        let index = ary.findIndex(item => {
+            return item > 10;
+        });
+        console.log(index); //3
+    </script>
+</body>
+
+</html>

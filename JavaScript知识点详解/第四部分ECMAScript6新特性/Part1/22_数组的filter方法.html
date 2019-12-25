@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // filter：过滤器 也会对数组进行遍历
+        let arr = [12, 5, 8, 90, 75, 36];
+        //如果要筛选出数组中能被3整除的元素
+        //1.使用普通方式
+        let result = function(item) {
+            if (item % 3 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+        //该方法输入每一个数组元素作为参数，通过返回的true或者false来判断能否被3整除,这样多此一举
+
+        //2.配合箭头表达式，可以简写为：
+        let result2 = arr.filter(item => item % 3 == 0); //条件;输出数组中能被3整除的元素,达到"过滤"的作用
+        console.log(result2);
+
+
+        //再比如
+        /*  let arr2 = [{
+             title: '衬衫',
+             price: 75
+         }, {
+             title: '包子',
+             price: 1200
+         }, {
+             title: '男士表',
+             price: 20000
+         }, {
+             title: '鞋子',
+             price: 700
+         }];
+         let result2 = arr2.filter(JSON => JSON.price > 10000);
+         console.log(result2); */
+    </script>
+</body>
+
+</html>

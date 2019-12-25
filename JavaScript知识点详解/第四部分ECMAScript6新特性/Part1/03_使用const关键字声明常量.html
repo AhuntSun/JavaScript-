@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //作用const声明的常量 常量就是值(内存地址)不能改变的量
+        //1.具有块级作用域
+        if (true) {
+            const a = 10;
+            if (true) {
+                const a = 20;
+                console.log(a);
+            }
+            console.log(a);
+        }
+        //console.log(a); //外部无法访问块级作用域内变量，所以该语句报错
+
+        //2.声明常量是必须初始化
+        // const PI = 3.14;
+
+        //3.常量赋值后，简单数据类型的值不能更改; 引用类型(复杂数据类型)的内存地址里存的值可改，地址不能更改。
+        const PI = 3.14;
+        //PI = 4;会报错
+        const ary = [100, 200];
+        ary[0] = 123; //复杂数据类型常量数组内对应索引的值可以改变
+        //ary = [1, 2]; 但是数组本身的内存地址不能改变(即不能重新赋值一个不同的数组)
+        console.log(ary);
+
+        /*  var let const 区别
+        var                     let             const
+        函数级作用域         块级作用域         块级作用域
+        变量提升            不存在变量提升      不存在变量提升
+        值可改变            值可改变            值不可改变 */
+
+        // 由于JavaScript从上往下一句一句代码解释运行的机制，当前面某行代码出现错误，其后面的程序就会停止解释运行。也正是由于这种机制导致，本地程序即使函数名、变量名重名等都不会报错，只有在运行时才会报错。
+    </script>
+</body>
+
+</html>

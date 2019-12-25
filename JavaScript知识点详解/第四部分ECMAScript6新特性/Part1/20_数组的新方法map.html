@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // map :映射  一个对一个
+        // [90,80,70,60,50] 映射为[A,B,C,D,E]
+        let arr = [12, 8, 5];
+        //map方法的参数是一个函数,表示对item值的处理方法,函数中的item表示数组里面迭代的当前值。该方法相当于遍历数组并对其中的值进行操作,最后返回一个新数组;
+        let result = arr.map(item => item * 2);
+        alert(result);
+
+        let score = [19, 85, 99, 25, 90];
+        var result2 = score.map(item => item >= 60 ? `及格` : '不及格');
+        alert(score);
+        alert(result2);
+    </script>
+</body>
+
+</html>

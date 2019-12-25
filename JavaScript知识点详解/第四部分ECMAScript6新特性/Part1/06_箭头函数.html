@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //箭头函数是ES6中新增的函数定义方式:()=>{} 小括号中写参数，大括号中写函数体
+        //1.const fn =() =>{} 通常会把箭头函数赋值给一个变量，通过变量名字来调用函数
+        const fn = () => {
+            console.log(123);
+        }
+        fn();
+
+        //2.函数体只有一行代码，且代码执行结果就是返回值，可以省略大括号
+        // 正常写法
+        /*  const sum = (num1, num2) => {
+             return num1 + num2;
+         } */
+        //函数体只有一行return代码时
+        const sum = (num1, num2) => num1 + num2;
+        console.log(sum(1, 2));
+
+        //3.箭头函数中如果形参只有一个那么可以省略小括号;没参数时小括号不能省略
+        /*  function fn2(v){
+             return v;
+         } 可以写成*/
+        const fn2 = v => v;
+        console.log(fn2(10));
+
+        //4.箭头函数不绑定this,箭头函数没有自己的this关键字,如果在箭头函数中使用this,this关键字将指向箭头函数定义位置中的this所指向的对象,比如下面的箭头函数定义在fn中则箭头函数中的this与fn中this指向相同
+        const obj = {
+            name: 'Tom'
+        };
+
+        function fn3() {
+            console.log(this); //这里的this指向调用fn3函数的对象
+            return () => {
+                console.log(this);
+            }
+
+        }
+        const resFn = fn3.call(obj); //指向obj
+        console.log(resFn); //返回的是fn3里的箭头函数
+        resFn(); //这里的箭头函数定义在fn3中，fn3中的this指向obj对象，所以这里的this也指向obj对象
+    </script>
+</body>
+
+</html>

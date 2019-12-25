@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.Array.from()方法可以把伪数组转换为真数组
+        var arrayLike = {
+            '0': "张三",
+            '1': "王五",
+            '2': "赵六",
+            "length": 3
+        }
+        var ary = Array.from(arrayLike);
+        console.log(typeof ary); //数组也是对象
+        console.log(ary);
+
+        //from()中的第二个参数是函数,可以对转换的为的真数组里面的元素进行统一处理
+        var arrayLike2 = {
+            "0": "1",
+            "1": "2",
+            "length": 2
+        }
+        let newArr = Array.from(arrayLike2, item => item * 2); //先把arrayLike转换为真数组对arrayLike中的每一个元素乘以2
+        console.log(newArr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name = `这是一个模板字符串`; //用反引号声明
+        console.log(name);
+        //模板字符串可以解析变量;而不用使用传统的+号拼接
+        let name2 = 'Tom';
+        let sayHello = `hello ,my name is ${name2}`; //要使用${}来包裹变量
+        console.log(sayHello);
+
+        //模板字符串中可以换行
+        let result = {
+            name: "Tom",
+            age: 40
+        };
+        let html = `
+            <div>
+                <span>${result.name}</span>
+                <span>${result.age}</span>
+            </div>
+        `;
+        console.log(html);
+
+        //在模板字符串中可以调用函数,输出显示的是函数的执行结果
+        const sayHello2 = function() {
+            return 'Hello~';
+        }
+        const fn = () => '我是fn函数'; //箭头函数的简写,sayHello2为不简写的形式
+        let great = `我是模板字符串,${fn()}
+            还可以是我${sayHello2()}`; //同样是在${}中调用函数
+        console.log(great);
+    </script>
+</body>
+
+</html>
