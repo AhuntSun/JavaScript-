@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+    <script>
+        // <!-- 通过类型获取元素 -->
+        //1.getElementsByClassName(); 根据类名获得某些元素集合
+        var boxes = document.getElementsByClassName('box');
+        console.log(boxes);
+        console.log('-------------------');
+
+
+        //2.querySelector 返回指定选择器的第一个元素
+        var firstBox = document.querySelector('.box'); //参数填的是选择器,勿漏了.
+        console.log(firstBox);
+
+        var nav = document.querySelector('#nav');
+        console.log(nav);
+        var li = document.querySelector('li'); //没有选择器则写标签选择器 .box #nav li
+        console.log(li);
+        console.log('-------------------');
+
+        //3.querySelectorAll();返回指定元素的所有对象集合(以伪数组的形式存储)
+        var allBox = document.querySelectorAll('.box'); //参数还是相应的选择器
+        console.log(allBox);
+        var lis = document.querySelectorAll('li');
+        console.log(lis);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //点击一个按钮，就弹出对话框 
+        // 1.事件由三部分组成 事件源 事件类型 事件处理程序 我们也称为事件三要素
+        // (1)事件源 事件触发的对象  如：谁  按钮
+        var btn = document.getElementById('btn');
+        // 2.事件类型 如何触发？什么事件？比如鼠标点击：onclick？还是鼠标经过？还是键盘按下？
+        // 3.时间处理程序 通过一个函数赋值的方式完成
+        btn.onclick = function() {
+            alert('点击按钮');
+        }
+
+        //以上例子为先获取一个按钮元素对象，再为按钮对象添加事件和处理函数
+    </script>
+</body>
+
+</html>

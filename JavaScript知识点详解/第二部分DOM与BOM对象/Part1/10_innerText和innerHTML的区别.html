@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <p>
+        我是文字
+        <span>
+             123
+         </span>
+    </p>
+    <script>
+        //1.innerText:不识别HTML标签 非标准 去除空格和换行
+        var div = document.querySelector('div');
+        // div.innerText = '<strong>今天是：</strong>2019'
+
+        //2.innerHTML 能够识别HTML标签 W3C推荐标准 保留空格和标签的** 使用最多
+        div.innerHTML = '<strong>今天是：</strong>2019';
+
+        //这两个元素是可读写的 可以删除元素里面的内容
+        var p = document.querySelector('p');
+        console.log(p.innerText);
+        console.log(p.innerHTML);
+    </script>
+</body>
+
+</html>

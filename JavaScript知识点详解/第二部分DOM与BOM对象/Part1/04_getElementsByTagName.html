@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久22</li>
+        <li>知否知否，应是等你好久33</li>
+        <li>知否知否，应是等你好久44</li>
+        <li>知否知否，应是等你好久55</li>
+    </ul>
+    <ol id="ol">
+        <!-- 按住鼠标滚轮可以在跨行改选中每行的部分文本，很实用的技巧 ;也可以使用shift+alt+左键-->
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+    <script>
+        //1.getElementsByTagName方法返回带有指定标签的对象的集合 -->以伪数组的方式存储：有length和索引但没有数组方法的称为伪数组
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(lis[0]);
+
+        //2.依次打印元素对象 可以采用遍历的方式:得到的对象是动态可修改的
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+        //3.如果页面只有一个li 返回的还是伪数组的形式
+        //4.如果页面中没有这个元素返回的是空的伪数组
+
+        //5.element.getElementsByTagName('标签名');
+        //    var ol = document.getElementsByTagName('ol');//[ol]
+        //    console.log(ol[0].getElementsByTagName('li'));//即使伪数组[ol]只有一个元素，也要指定具体的某一个元素为父类 如本例中的ol[0]
+
+        var ol = document.getElementById('ol'); //通过给所要操作标签 写id的形式直接获取其对象
+        console.log(ol.getElementsByTagName('li'));
+        //注意：父元素必须指明是哪一个元素对象，如开始的写法是通过ol[0]的方式获取该父元素的；改进的方法是给要操作的ol标签写id的形式直接获取。
+    </script>
+</body>
+
+</html>
